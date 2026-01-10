@@ -1,0 +1,23 @@
+html, body, .layout {
+  height: 100%;
+}
+
+.layout {
+    display: grid;
+    grid-template-rows: [main-start] 3rem [content-start] 1fr [content-end] 3rem [main-end];
+}
+
+header {
+    grid-row-start: main-start;
+    grid-row-end: content-start;
+}
+
+main {
+    grid-row-start: content-start;
+    grid-row-end: content-end;
+}
+
+footer {
+    grid-row-start: content-end;
+    grid-row-end: main-end;
+}
