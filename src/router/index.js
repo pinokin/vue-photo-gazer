@@ -12,10 +12,12 @@ const router = createRouter({
     {
       path: '/photo',
       name: 'photo',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/PhotoView.vue'),
+      component: () => import("@/views/PhotoView.vue"),
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import("@/views/NotFoundView.vue"),
     },
   ],
 })

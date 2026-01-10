@@ -3,6 +3,9 @@
 
 <template>
   <main class="container">
-    <h1>Photo Gazer</h1>
+    <hgroup>
+      <h1>Photo Gazer</h1>
+      <p>A simple image gallery built with Vue.</p>
+    </hgroup>
   </main>
 </template>
