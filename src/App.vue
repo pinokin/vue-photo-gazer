@@ -3,9 +3,15 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header class="container">
-    <p>TODO Something</p>
+  <header>
+    <p>This is the header</p>
   </header>
 
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
+
+  <footer>
+    <p>This is the footer</p>
+  </footer>
 </template>
