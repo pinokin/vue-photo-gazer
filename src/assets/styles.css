@@ -2,22 +2,38 @@ html, body, .layout {
   height: 100%;
 }
 
+/* Layout grid */
 .layout {
     display: grid;
-    grid-template-rows: [main-start] 3rem [content-start] 1fr [content-end] 3rem [main-end];
+    grid-template-rows: [main-start] auto [content-start] 1fr [content-end] auto [main-end];
+
+    header {
+        grid-row-start: main-start;
+        grid-row-end: content-start;
+    }
+
+    main {
+        grid-row-start: content-start;
+        grid-row-end: content-end;
+    }
+
+    footer {
+        grid-row-start: content-end;
+        grid-row-end: main-end;
+    }
 }
 
-header {
-    grid-row-start: main-start;
-    grid-row-end: content-start;
+/* Full-width elements */
+header,
+footer {
+    background-color: var(--pico-contrast-background);
+    padding-block: 1rem;
+
+    h1, p, a {
+        color: var(--pico-primary-inverse);
+    }
 }
 
 main {
-    grid-row-start: content-start;
-    grid-row-end: content-end;
-}
-
-footer {
-    grid-row-start: content-end;
-    grid-row-end: main-end;
+    padding-block: 1rem;
 }
