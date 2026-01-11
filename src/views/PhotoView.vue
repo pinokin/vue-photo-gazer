@@ -1,5 +1,5 @@
 <template>
   <hgroup>
-    <h1>This is a photo page</h1>
+    <h1>Photo #{{ $route.params.id }}</h1>
   </hgroup>
 </template>
