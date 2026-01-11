@@ -2,7 +2,7 @@
 
 A simple image gallery using Vue in Vite.
 
-<img alt="Status" title="Status" src="https://img.shields.io/badge/Status%20work%27in%27progress-7C4F0B?style=for-the-badge" />
+<img alt="Status" title="Status" src="https://img.shields.io/badge/Status%20good%20enough-7C4F0B?style=for-the-badge" />
 
 ## Given requirements
 
