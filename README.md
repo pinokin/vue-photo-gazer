@@ -2,6 +2,8 @@
 
 A simple image gallery using Vue in Vite.
 
+<img alt="Status" title="Status" src="https://img.shields.io/badge/Status%20work%27in%27progress-7C4F0B?style=for-the-badge" />
+
 ## Given requirements
 
 - **Format.** The app needs to be a single-page application (SPA).
