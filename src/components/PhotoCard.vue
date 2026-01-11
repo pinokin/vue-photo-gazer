@@ -1,18 +1,11 @@
 <script setup>
-    import { computed } from 'vue';
-
     const props = defineProps({
         id: Number,
         title: String,
+        thumbnailUrl: String,
     });
-
-    let imageUrl = computed(() => {
-        let urlWithId = "https://picsum.photos/seed/" + props.id + "/300/300";
-        return urlWithId;
-    });
-
 </script>
 
 <template>
-    <img :src="imageUrl" :alt="props.title" :title="props.title" width="300" />
+    <img :src="props.thumbnailUrl" :alt="props.title" :title="props.title" width="300" />
 </template>
