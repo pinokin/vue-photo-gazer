@@ -14,7 +14,5 @@
 </script>
 
 <template>
-    <article>
-        <img :src="imageUrl" :alt="props.title" :title="props.title" width="300" />
-    </article>
+    <img :src="imageUrl" :alt="props.title" :title="props.title" width="300" />
 </template>
