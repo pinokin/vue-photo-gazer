@@ -1,6 +1,8 @@
 <script setup>
-  import { onMounted, onUnmounted } from 'vue';
-  import { RouterView } from 'vue-router'
+  import { ref, onMounted, onUnmounted } from 'vue';
+  import { RouterLink, RouterView } from 'vue-router'
+
+  let isLoading = ref(false);
 
   onMounted(() => getPhotos());
   onUnmounted(() => clearLocalStorage());
@@ -13,6 +15,8 @@
     }
 
     try {
+      isLoading = true;
+
       let response = await
         fetch('https://jsonplaceholder.typicode.com/photos?_page=1&_limit=25');
       
@@ -28,6 +32,8 @@
       });
 
       window.localStorage.setItem('photos', JSON.stringify(data));
+
+      isLoading = false;
     
     } catch (error) {
         console.warn(error);
@@ -41,14 +47,20 @@
 
 <template>
   <header>
-    <p>This is the header</p>
+    <hgroup class="container">
+      <h1>Photo Gazer</h1>
+      <p>A simple image gallery built with Vue.</p>
+    </hgroup>
   </header>
 
-  <main>
+  <main class="container">
+    <span v-if="isLoading" aria-busy>Getting photos...</span>
     <RouterView />
   </main>
 
   <footer>
-    <p>This is the footer</p>
+    <div class="container">
+      <p><a href="https://github.com/pinokin/vue-photo-gazer">Code in Github</a></p>
+    </div>
   </footer>
 </template>
