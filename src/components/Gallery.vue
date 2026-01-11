@@ -1,6 +1,5 @@
 <script setup>
     import { ref, onMounted } from 'vue';
-    import { RouterLink } from 'vue-router';
     import PhotoCard from './PhotoCard.vue';
 
     let photos = ref([]);
@@ -20,9 +19,7 @@
     </div>
     <ul v-if="photos.length">
         <li v-for="photo in photos" :key="photo.id">
-            <RouterLink :to="`/photo/${photo.id}`">
-                <PhotoCard v-bind="photo"></PhotoCard>
-            </RouterLink>
+            <PhotoCard v-bind="photo"></PhotoCard>
         </li>
     </ul>
 </template>
@@ -35,7 +32,7 @@
     }
 
     .tag-container small {
-        background-color: var(--pico-secondary-background);
+        background-color: var(--pico-muted-color);
         color: var(--pico-primary-inverse);
         padding: 0.25rem 0.5rem;
         border-radius: 0.25rem;

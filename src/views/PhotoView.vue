@@ -30,8 +30,8 @@
 
 <template>
   <hgroup>
-    <h1>Photo #{{ photo.id }}</h1>
-    <h2>{{ photo.title }}</h2>
+    <h2>Photo #{{ photo.id }}</h2>
+    <p>{{ photo.title }}</p>
   </hgroup>
   <img :src="photo.imageUrl" :alt="photo.title" :title="photo.title" width="600" />
   <p>
